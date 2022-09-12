@@ -9,4 +9,4 @@ const categoryList = ingredients.map(el => {
   return elementLi;
 });
 
-console.log(navElement.append(...categoryList));
+navElement.append(...categoryList);
