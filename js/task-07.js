@@ -1,3 +1,10 @@
+const inputFieldRef = document.querySelector('#font-size-control');
+const textRef = document.querySelector('#text');
+
+inputFieldRef.addEventListener('input', () => {
+  textRef.style.fontSize = `${inputFieldRef.value}px`;
+});
+
 /*
 
 Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input)
@@ -9,10 +16,3 @@
 <span id="text">Abracadabra!</span>
 
 */
-
-const inputRangeRef = document.querySelector('#font-size-control');
-const textRef = document.querySelector('#text');
-
-inputRangeRef.addEventListener('input', () => {
-  textRef.style.fontSize = `${inputRangeRef.value}px`;
-});

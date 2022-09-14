@@ -1,3 +1,15 @@
+const inputFieldRef = document.querySelector('#validation-input');
+
+inputFieldRef.addEventListener('blur', () => {
+  if (inputFieldRef.value.length >= inputFieldRef.dataset.length) {
+    inputFieldRef.classList.remove('invalid');
+    inputFieldRef.classList.add('valid');
+  } else {
+    inputFieldRef.classList.remove('valid');
+    inputFieldRef.classList.add('invalid');
+  }
+});
+
 /*
 Задание 6
 Напиши скрипт, который при потере фокуса на инпуте (событие blur), 
@@ -27,15 +39,3 @@
 }
 
 */
-
-const inputFieldRef = document.querySelector('#validation-input');
-
-inputFieldRef.addEventListener('blur', () => {
-  if (inputFieldRef.value.length >= inputFieldRef.dataset.length) {
-    inputFieldRef.classList.remove('invalid');
-    inputFieldRef.classList.add('valid');
-  } else {
-    inputFieldRef.classList.remove('valid');
-    inputFieldRef.classList.add('invalid');
-  }
-});

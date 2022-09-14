@@ -1,3 +1,10 @@
+const fieldInputRef = document.querySelector('#name-input');
+const spanRef = document.querySelector('#name-output');
+
+fieldInputRef.addEventListener('input', () => {
+  spanRef.textContent = fieldInputRef.value;
+});
+
 /*
 
 Задание 5
@@ -9,10 +16,3 @@
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
 */
-
-const fieldInputRef = document.querySelector('#name-input');
-const spanRef = document.querySelector('#name-output');
-
-fieldInputRef.addEventListener('input', () => {
-  spanRef.textContent = fieldInputRef.value;
-});

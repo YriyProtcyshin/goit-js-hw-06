@@ -1,3 +1,24 @@
+const formRef = document.querySelector('.login-form');
+
+formRef.addEventListener('submit', handlerSubmit);
+
+function handlerSubmit(event) {
+  event.preventDefault();
+  const currentElement = event.currentTarget.elements;
+  if (!currentElement.email.value || !currentElement.password.value) {
+    alert('Все поля должны быть заполнены!!!');
+    return;
+  }
+
+  const dataFromForm = {
+    email: currentElement.email.value,
+    password: currentElement.password.value,
+  };
+
+  console.log(dataFromForm);
+  formRef.reset();
+}
+
 /*
 Задание 8
 Напиши скрипт управления формой логина.
@@ -24,24 +45,3 @@
 Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
 
 */
-
-const formRef = document.querySelector('.login-form');
-
-formRef.addEventListener('submit', handlerSubmit);
-
-function handlerSubmit(event) {
-  event.preventDefault();
-  const currentElement = event.currentTarget.elements;
-  if (!currentElement.email.value || !currentElement.password.value) {
-    alert('Все поля должны быть заполнены!!!');
-    return;
-  }
-
-  const dataFromForm = {
-    email: currentElement.email.value,
-    password: currentElement.password.value,
-  };
-
-  console.log(dataFromForm);
-  formRef.reset();
-}

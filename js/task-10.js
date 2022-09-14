@@ -27,6 +27,7 @@ ref.btnDestroyElements.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
   ref.divBoxes.innerHTML = '';
+  ref.inputField.value = '';
 }
 
 /*
