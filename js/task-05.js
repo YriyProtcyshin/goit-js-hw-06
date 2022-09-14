@@ -2,7 +2,11 @@ const fieldInputRef = document.querySelector('#name-input');
 const spanRef = document.querySelector('#name-output');
 
 fieldInputRef.addEventListener('input', () => {
-  spanRef.textContent = 'Anonymous' || fieldInputRef.value.trim();
+  if (fieldInputRef.value.trim()) {
+    spanRef.textContent = fieldInputRef.value.trim();
+  } else {
+    spanRef.textContent = 'Anonymous';
+  }
 });
 
 /*
